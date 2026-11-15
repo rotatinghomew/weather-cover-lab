@@ -1,0 +1,6 @@
+[project]
+name = "weather-cover-lab"
+version = "0.3.0"
+description = "本地经营资料、业务约束和咨询档案"
+requires-python = ">=3.11,<3.12"
+dependencies = ["numpy==2.2.6", "scipy==1.15.3"]
