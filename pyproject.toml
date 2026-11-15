@@ -4,3 +4,12 @@ version = "0.3.0"
 description = "本地经营资料、业务约束和咨询档案"
 requires-python = ">=3.11,<3.12"
 dependencies = ["numpy==2.2.6", "scipy==1.15.3"]
+
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["weather_cover"]
+
+[tool.unittest]

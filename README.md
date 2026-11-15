@@ -21,3 +21,15 @@ Python 3.11，独立镜像按摘要固定为 3.11.14；固定 NumPy 2.2.6、SciP
 `overview.py` 仅列出已有资料覆盖，不作效果推断或方案推荐。
 `app.py` 提供概览、询价和档案读取，`ledger.py` 以内容标识存档。
 数据字段和兼容接口见 `docs/contracts.md`，`data/request.json` 是当前有效的业务查询示例。
+
+## 离线构建验证
+
+requirements-build.txt 固定构建前端、后端及其传递依赖；对应 wheel 随仓库提供，requirements.lock 同时覆盖运行和构建环境。
+
+```bash
+python -m pip install --no-index --find-links=vendor/wheels -r requirements.lock
+python -m unittest discover -s tests -v
+python -m build --wheel --no-isolation
+```
+
+Dockerfile 使用相同离线依赖；默认 demo 会启动本地资料服务和消费服务，完成业务回执与档案重读后退出。

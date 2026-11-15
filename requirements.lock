@@ -1,3 +1,8 @@
 # 离线安装的统计计算依赖。
 numpy==2.2.6
 scipy==1.15.3
+build==1.2.2.post1
+setuptools==75.8.0
+wheel==0.45.1
+packaging==24.2
+pyproject_hooks==1.2.0
